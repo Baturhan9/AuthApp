@@ -1,0 +1,21 @@
+@page
+@model AuthApp.Pages.Registration
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+    
+<form method="post">
+    <input type="text" name="UName"/>
+    <p></p>
+    <input type="text" name="UPassword"/>
+    <p></p>
+    <input type="text" name="UEmail"/>
+    <p></p>
+    <input type="number" name="UAge"/>
+    <p></p>
+    <button type="submit">Register</button>
+    <button asp-page="/Login">Go back</button>
+</form>
