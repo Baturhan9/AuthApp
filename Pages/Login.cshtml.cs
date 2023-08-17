@@ -29,8 +29,8 @@ namespace AuthApp.Pages
             var userobj = _context.Users.FirstOrDefault(x => x.UName == loginName && x.UPassword == loginPassword);
             if(userobj == null)
             {
-                // ViewData["Not Found User"] = "Not correct Name or Password";
-                return RedirectToPage();
+                ModelState.AddModelError(string.Empty, "Не правильный логин или пароль");
+                return Page();
             }
 
             return RedirectToPage("/MainPage");
